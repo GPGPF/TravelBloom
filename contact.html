@@ -16,58 +16,45 @@
         }
         .mid{
             flex: 10;
-            display: block;
+            flex-direction: row;
+            /* justify-content: space-between; */
+            gap: 20px;
+            justify-content: left;
+            align-items: center;
+        }
+        .mid-title p{
+            font-size: 16px;
+            margin-top: 20px;
+            text-transform: capitalize;
         }
         .mid-content{
-            width: 100%;
-            padding: 10px;
-            background-color: rgba(0,0,0,0.4);
-            line-height: 25px;
-            margin-top: 20px;
-            border-radius: 10px;
+            width: calc(100% - 500px);
+            margin-left: auto;
         }
-        .our-team{
-            display: flex;
-            margin-top: 40px;
-        }
-        .our-team .title{
-            flex: 1;
-            font-size: 2.5em;
-        }
-        .our-team .team-members{
-            flex: 5;
-            display: flex;
-            gap: 20px;
-        }
-        .team-member{
-            padding: 10px;
+        #contactForm{
             background-color: rgba(0,0,0,0.3);
-            display: flex;
-            gap: 10px;
+            padding: 10px;
             border-radius: 10px;
         }
-        .member-info{
-            padding: 20px;
-            padding-left: 0;
-            color: white;
-        }
-        .member-name{
+        #contactForm label{
             font-weight: bold;
         }
-        .member-role{
-            margin-top: 5px;
-            opacity: .7;
-        }
-        .member-info .role{
-            margin-top: 5px;
-            padding: 5px;
-            text-align: center;
+        .mid-content input,.mid-content textarea{
+            background-color: transparent;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            outline: none;
             border-radius: 10px;
+            width: 100%;
+            padding: 10px;
             border: 1px solid white;
-            background-color: rgba(0, 82, 150, 0.86);
             color: white;
-            text-transform: uppercase;
         }
+        .mid-content input[type=submit]{
+            width: 100%;
+            background-color: rgb(9, 96, 67);
+        }
+        
     </style>
 </head>
 
@@ -162,6 +149,7 @@
         </ul>
     </nav>
     <section class="about">
+
         <div class="overlay"></div>
         <div class="content">
             <aside class="left">
@@ -174,55 +162,23 @@
                 </div>
             </aside>
             <div class="mid">
-                <div class="mid-title"><h1>ABOUT US</h1></div>
+                <div class="mid-title"><h1>CONTACT US</h1>
+                <p>Get in touch</p></div>
                 <div class="mid-content">
-                    <p>Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our costumers. Our mission is to <b>provides the best experience</b> for people travelling to different destinations around the world. <br> Our values include integrity, innovation, customer satisfaction and teamwork. We believe in <b>putting our customers first</b> and <b>working together</b> to achieve our goals. <br>Feel free to explore our website to learn more about what we offer! </p>
-                </div>
-                <div class="our-team">
-                    <div class="title">
-                        <h1>OUR <br> TEAM</h1>
-                    </div>
-                    <div class="team-members">
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="./Images/user.png" alt="Member-1" width="40">
-                            </div>
-                            <div class="member-info">
-                                <p class="member-name">Thaher Mulla</p>
-                                <p class="member-role">Thaher is responsible <br> for...
-                                <br>
-                                <p class="role">CEO</p>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="./Images/user-2.png" alt="Member-1" width="40">
-                            </div>
-                            <div class="member-info">
-                                <p class="member-name">Srinath Mattam</p>
-                                <p class="member-role">Srinath is responsible <br> for...
-                                <br>
-                                <p class="role">TEAM LEAD</p>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="./Images/user-3.png" alt="Member-1" width="40">
-                            </div>
-                            <div class="member-info">
-                                <p class="member-name">Gayathri Godula</p>
-                                <p class="member-role">Gayathri is responsible <br> for...
-                                <br>
-                                <p class="role">Manager</p>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
+                   <form action="#" id="contactForm">
+                        <label for="name">Name</label>
+                        <br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <br>
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" name="email" id="email" placeholder="Enter your email">
+                        <br>
+                        <label for="message">Message</label>
+                        <br>
+                        <textarea name="message" id="message" rows="10"></textarea>
+                        <input type="submit" value="Submit">
+                   </form>
                 </div>
             </div>
         </div>
