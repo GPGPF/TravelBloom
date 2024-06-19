@@ -64,3 +64,11 @@ fetchData().then((res)=>{
         })
     })
 })
+const resetButton=document.querySelector(".reset");
+resetButton.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const input=document.querySelector('input');
+    input.value="";
+    search_results_box.innerHTML="";
+
+})
